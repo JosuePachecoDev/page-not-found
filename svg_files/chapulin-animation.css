@@ -1,0 +1,17 @@
+.eye-circle {
+    animation: eyes-animation 2s infinite;
+}
+
+@keyframes eyes-animation {
+    from {
+        r: 24;
+    }
+
+    50% {
+        r: 26.5;
+    }
+
+    to {
+        r: 24;
+    }
+}
