@@ -22,47 +22,55 @@ body {
   height: 90vh;
 }
 
+.body {
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 6rem;
+}
+
 #chapulin-svg {
   width: 250px;
   margin-left: 2rem;
 }
 
 button {
- padding: 10px 22px;
- border: unset;
- border-radius: 16px;
- color: inherit;
- z-index: 1;
- background: #fadf06;
- position: relative;
- font-weight: 1000;
- font-size: 17px;
- box-shadow: 0 8px 19px -3px rgb(200, 200, 200);
- transition: all 250ms;
- overflow: hidden;
+  padding: 10px 22px;
+  border: unset;
+  border-radius: 16px;
+  color: inherit;
+  z-index: 1;
+  background: #fadf06;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  box-shadow: 0 8px 19px -3px rgb(200, 200, 200);
+  transition: all 250ms;
+  overflow: hidden;
 }
 
-button::before {
- content: "";
- position: absolute;
- top: 0;
- left: 0;
- height: 100%;
- width: 0;
- border-radius: 16px;
- background-color: #191919;
- z-index: -1;
- -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
- box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
- transition: all 250ms
-}
+@media (hover:hover) {
+  button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 16px;
+    background-color: #191919;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms
+  }
 
-button:hover {
- color: #fffdec;
-}
+  button:hover {
+    color: #fffdec;
+  }
 
-button:hover::before {
- width: 100%;
+  button:hover::before {
+    width: 100%;
+  }
 }
 
 
@@ -73,5 +81,47 @@ button:hover::before {
 
   #chapulin-svg {
     width: 300px;
+  }
+}
+
+@media (max-width:1100px) {
+  #chapulin-svg {
+    margin: 0;
+    width: 200px;
+  }
+}
+
+@media (max-width:1012px) {
+  body {
+    height: auto;
+  }
+
+  .body {
+    margin: 4rem 0;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 3rem;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    text-align: center;
+  }
+
+  #chapulin-svg {
+    width: 150px;
+  }
+}
+
+@media (max-width:640px) {
+  .body {
+    margin: 2rem 0;
   }
 }
